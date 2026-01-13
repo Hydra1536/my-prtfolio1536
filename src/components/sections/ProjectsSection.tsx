@@ -127,7 +127,7 @@ const ProjectsSection = () => {
                       rel="noopener noreferrer"
                       className="p-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
                       whileHover={{ scale: 2.1 }}
-                      whileTap={{ scale: 0.9 }}
+                      whileTap={{ scale: 1.9 }}
                       onClick={(e) => e.stopPropagation()}
                     >
                       <Github className="w-4 h-4 text-white" />
