@@ -246,7 +246,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         className="mt-24 text-center text-muted-foreground"
       >
         <p className="text-sm">
-          © {new Date().getFullYear()}Md Rezaul Karim. I aim to build secure, scalable systems that power real-world applications.🏄‍♂️
+          © {new Date().getFullYear()} Md Rezaul Karim. I aim to build secure, scalable systems that power real-world applications.🏄‍♂️
         </p>
       </motion.div>
     </section>
