@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { MapPin, Phone, Mail, Calendar, Work } from "lucide-react";
+import { MapPin, Phone, Mail, Calendar } from "lucide-react";
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -26,7 +26,6 @@ const AboutSection = () => {
     { icon: MapPin, text: "Dhaka, Bangladesh" },
     { icon: Phone, text: "+880 1533 858640" },
     { icon: Mail, text: "reza15361382@gmail.com" },
-    { icon: Work, text: "Hubar Tech LTD" },
   ];
 
   return (
