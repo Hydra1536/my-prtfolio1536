@@ -77,7 +77,11 @@ const AboutSection = () => {
                   Career Objective
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Seeking a challenging position in a reputable organization to expand my learnings, knowledge, and skills. I am a dedicated and self-motivated developer with strong skills in <span className="text-secondary">Django REST Framework</span>, <span className="text-primary">PostgreSQL</span>, and backend development. Passionate about building efficient, scalable web applications and APIs.
+                Django Developer with hands-on experience in building secure and scalable backend systems using Django REST 
+                Framework and PostgreSQL. Experienced in REST API development, JWT-based authentication, role-based access 
+                control, and backend architecture through real-world projects and professional internship experience. Seeking to 
+                contribute to a growth-oriented software company by building reliable backend solutions while continuously 
+                improving my engineering skills.                 
                 </p>
               </div>
 
