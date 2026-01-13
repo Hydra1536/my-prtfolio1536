@@ -59,9 +59,9 @@ const AboutSection = () => {
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                    <span className="font-display text-6xl md:text-7xl font-bold gradient-text">
-                      MRK
-                    </span>
+<img src="https://raw.githubusercontent.com/Hydra1536/soft-sphere-folio/main/public/WhatsApp%20Image%202024-03-21%20at%2019.02.51_d4fdc381.jpg" 
+    alt="Profile" 
+    className="w-full h-full object-cover"  />
                   </div>
                 </motion.div>
                 {/* Decorative rings */}
