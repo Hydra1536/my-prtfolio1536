@@ -4,22 +4,10 @@ import { useRef } from "react";
 import { Briefcase, Users } from "lucide-react";
 
 const experiences = [
-  {
-    title: "Backend Developer (Intern)",
-    company: "Hubar Tech Limited",
-    period: "Nov 2024 – Jan 2025",
-    description: [
-      "Developed REST APIs using Django REST Framework",
-      "Implemented JWT authentication and authorization",
-      "Worked with PostgreSQL database management",
-      "Collaborated with frontend team for API integration",
-    ],
-    type: "work",
-  },
-  {
+    {
     title: "SQA Engineer (Part-time, Remote)",
     company: "Hubar Tech Limited",
-    period: "Sep 2024 – Nov 2024",
+    period: "Jan 2026 – Present",
     description: [
       "Conducted software quality assurance testing",
       "Identified and documented bugs and issues",
@@ -29,11 +17,24 @@ const experiences = [
     type: "work",
   },
   {
-    title: "Former Director of Publications",
-    company: "BRAC University Computer and Language Club (BUCLC)",
-    period: "2023 – 2024",
+    title: "Backend Developer (Intern)",
+    company: "Hubar Tech Limited",
+    period: "Nov 2025 – Jan 2026",
     description: [
-      "Led the publications team for club activities",
+      "Developed REST APIs using Django REST Framework",
+      "Implemented JWT authentication and authorization",
+      "Worked with PostgreSQL database management",
+      "Collaborated with frontend team for API integration",
+    ],
+    type: "work",
+  },
+
+  {
+    title: "Former Director of Marketing",
+    company: "BRAC University Computer and Language Club (BUCLC)",
+    period: "2022 – 2025",
+    description: [
+      "Led the marketing team for club activities",
       "Managed content creation and documentation",
       "Coordinated with other departments for events",
       "Mentored junior members in technical writing",
