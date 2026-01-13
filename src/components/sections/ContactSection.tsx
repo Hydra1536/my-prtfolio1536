@@ -48,7 +48,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
     try {
       // using FormSubmit.co free API to send email
-      const response = await fetch("https://formsubmit.co/ajax/reza15361382@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/7e14a0b017fee24874d1075e4e04f8b0 ", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
