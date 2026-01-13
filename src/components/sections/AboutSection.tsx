@@ -24,9 +24,9 @@ const AboutSection = () => {
 
   const contactInfo = [
     { icon: MapPin, text: "Dhaka, Bangladesh" },
-    { icon: Phone, text: "+880 1753 988397" },
-    { icon: Mail, text: "rezaul.karim@g.bracu.ac.bd" },
-    { icon: Calendar, text: "Final Year Student @ BRAC University" },
+    { icon: Phone, text: "+880 1533 858640" },
+    { icon: Mail, text: "reza15361382@gmail.com" },
+    { icon: H, text: "Hubar Tech LTD" },
   ];
 
   return (
