@@ -5,7 +5,7 @@ import { Briefcase, Users } from "lucide-react";
 
 const experiences = [
     {
-    title: "SQA Engineer (Part-time, Remote)",
+    title: "SQA Engineer",
     company: "Hubar Tech Limited",
     period: "Jan 2026 – Present",
     description: [
