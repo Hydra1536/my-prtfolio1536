@@ -17,7 +17,7 @@ const projects = [
       "Swagger API Docs",
     ],
     techStack: ["Django", "DRF", "PostgreSQL", "Stripe", "bKash", "JWT"],
-    github: "https://github.com/Rezaul-2020331029",
+    github: "https://github.com/Hydra1536/ecommerce_system",
     color: "from-primary via-primary/80 to-secondary",
   },
   {
@@ -33,7 +33,7 @@ const projects = [
       "Swagger Documentation",
     ],
     techStack: ["Django", "DRF", "PostgreSQL", "Swagger", "Redis"],
-    github: "https://github.com/Rezaul-2020331029",
+    github: "https://github.com/Hydra1536/POS-Project",
     color: "from-secondary via-secondary/80 to-accent",
   },
   {
@@ -49,7 +49,7 @@ const projects = [
       "User Feedback System",
     ],
     techStack: ["Django", "PostgreSQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
-    github: "https://github.com/Rezaul-2020331029",
+    github: "https://github.com/Hydra1536/Django-Ice-Cream-Shop",
     color: "from-accent via-accent/80 to-primary",
   },
 ];
