@@ -5,15 +5,15 @@ import { Mail, Phone, MapPin, Send, Github, Linkedin, Youtube } from "lucide-rea
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "rezaul.karim@g.bracu.ac.bd", href: "mailto:rezaul.karim@g.bracu.ac.bd" },
-  { icon: Phone, label: "Phone", value: "+880 1753 988397", href: "tel:+8801753988397" },
-  { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh", href: "#" },
+  { icon: Mail, label: "Email", value: "reza15361382@gmail.com", href: "mailto:reza15361382@gmail.com" },
+  { icon: Phone, label: "Phone", value: "+880 1533 858640", href: "tel:+8801533858640" },
+  { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh", href: "http://google.com/maps?sca_esv=72ed8926a77c5d66&rlz=1C1GCEB_enBD958BD958&output=search&q=hubar+tech+limited+location&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3izczKHhF2wgz0AoHZ2f_yJ4zQ_V75tA8EUhOa7p9-hLJ1fbGrZX7zKyRMfBzXQB6xzYD8cB70sW-FPW9RfB4xF9LOZxyWDcBC50FCOyn_m5aptCnBpDsLGFOP9zd7g6wsj9wCvfgc72rzd8D5TKwzJP-InKftRaHSSrryw8uAeet9FQwA&entry=mc&ved=1t:200715&ictx=111" },
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/Rezaul-2020331029", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/md-rezaul-karim-dev/", label: "LinkedIn" },
-  { icon: Youtube, href: "https://www.youtube.com/@RazeenScholar", label: "YouTube" },
+  { icon: Github, href: "https://github.com/Hydra1536", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/md-rezaul-karim-2423a621a/", label: "LinkedIn" },
+  { icon: Youtube, href: "https://www.youtube.com/channel/UComrvL7jIvbpzWBGtDwpp8g", label: "YouTube" },
 ];
 
 const ContactSection = () => {
@@ -37,20 +37,49 @@ const ContactSection = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      // using FormSubmit.co free API to send email
+      const response = await fetch("https://formsubmit.co/ajax/reza15361382@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        form.reset();
+      } else {
+        toast({
+          title: "Error sending message",
+          description: "Please try again later or email me directly.",
+          variant: "destructive", // Assuming your toast supports variants
+        });
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast({
+        title: "Network Error",
+        description: "Something went wrong. Please check your connection.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
