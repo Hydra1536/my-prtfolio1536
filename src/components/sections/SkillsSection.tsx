@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code, Database, Server, Wrench, Shield } from "lucide-react";
+import { Monitor } from "lucide-react"; 
 
 const skillCategories = [
   {
