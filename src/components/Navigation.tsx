@@ -24,6 +24,23 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // FIX: New handler for mobile navigation
+  const handleMobileNav = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault(); // 1. Stop default jump behavior
+    
+    setIsMobileMenuOpen(false); // 2. Close the menu
+
+    // 3. Manually handle the scroll
+    const targetId = href.replace("#", "");
+    const element = document.getElementById(targetId);
+    if (element) {
+      // Small timeout ensures menu close animation doesn't jank the scroll
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -77,7 +94,7 @@ const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-nav mt-2"
+            className="md:hidden glass-nav mt-2 overflow-hidden" // Added overflow-hidden for smoother height animation
           >
             <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
               {navLinks.map((link, index) => (
@@ -88,7 +105,8 @@ const Navigation = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  // FIX: Use the new handler instead of inline onClick
+                  onClick={(e) => handleMobileNav(e, link.href)}
                 >
                   {link.name}
                 </motion.a>
