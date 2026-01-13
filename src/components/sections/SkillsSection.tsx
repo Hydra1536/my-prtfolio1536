@@ -7,7 +7,7 @@ const skillCategories = [
   {
     title: "Programming Languages",
     icon: Code,
-    skills: ["Python", "Java", "C"],
+    skills: ["Python", "Java", "C", "Assembly"],
     color: "from-primary to-primary/50",
   },
   {
@@ -32,6 +32,13 @@ const skillCategories = [
     title: "Security & Testing",
     icon: Shield,
     skills: ["Penetration Testing", "SQA Testing", "API Testing", "JWT Authentication", "OAuth"],
+    color: "from-secondary to-accent",
+  },
+  
+  {
+    title: "OS",
+    icon: OS,
+    skills: ["Windows", "Ubuntu", "Linux"],
     color: "from-secondary to-accent",
   },
 ];
