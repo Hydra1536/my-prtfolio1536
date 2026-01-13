@@ -37,7 +37,7 @@ const skillCategories = [
   
   {
     title: "OS",
-    icon: OS,
+    icon: Monitor,
     skills: ["Windows", "Ubuntu", "Linux"],
     color: "from-secondary to-accent",
   },
