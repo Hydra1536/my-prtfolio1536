@@ -126,7 +126,7 @@ const ProjectsSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={{ scale: 2.1 }}
                       whileTap={{ scale: 0.9 }}
                       onClick={(e) => e.stopPropagation()}
                     >
