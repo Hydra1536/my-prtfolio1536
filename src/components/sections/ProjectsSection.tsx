@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, CreditCard, ShoppingCart, Database, IceCream } from "lucide-react";
+import { ExternalLink, Github, CreditCard, ShoppingCart, Store, IceCream } from "lucide-react";
 
 const projects = [
   {
@@ -23,7 +23,7 @@ const projects = [
   {
     title: "POS System",
     description: "A POS system for managing products using Django, DRF, PostgreSQL with filtering, searching, pagination, rate limiting, and Swagger documentation.",
-    icon: Database,
+    icon: Store,
     features: [
       "Full CRUD API",
       "PostgreSQL Database",
