@@ -21,8 +21,8 @@ const projects = [
     color: "from-primary via-primary/80 to-secondary",
   },
   {
-    title: "Product API",
-    description: "A complete backend API for managing products using Django, DRF, PostgreSQL with filtering, searching, pagination, rate limiting, and Swagger documentation.",
+    title: "POS System",
+    description: "A POS system for managing products using Django, DRF, PostgreSQL with filtering, searching, pagination, rate limiting, and Swagger documentation.",
     icon: Database,
     features: [
       "Full CRUD API",
