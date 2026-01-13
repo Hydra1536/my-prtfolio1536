@@ -152,15 +152,10 @@ While this is a personal portfolio project, I'm open to suggestions and improvem
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## 📬 Contact
 
 **Md Rezaul Karim**
 - **Email**: reza15361382@gmail.com
-- **Phone**: +880 1533 858640
 - **Location**: Dhaka, Bangladesh
 
 ### Connect with me:
