@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Youtube, Mail, ChevronDown } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/Rezaul-2020331029", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/md-rezaul-karim-dev/", label: "LinkedIn" },
-  { icon: Youtube, href: "https://www.youtube.com/@RazeenScholar", label: "YouTube" },
-  { icon: Mail, href: "mailto:rezaul.karim@g.bracu.ac.bd", label: "Email" },
+  { icon: Github, href: "https://github.com/Hydra1536", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/md-rezaul-karim-2423a621a/", label: "LinkedIn" },
+  { icon: Youtube, href: "https://www.youtube.com/channel/UComrvL7jIvbpzWBGtDwpp8g", label: "YouTube" },
+  { icon: Mail, href: "mailto:reza15361382@gmail.com", label: "Email" },
 ];
 
 const HeroSection = () => {
