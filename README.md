@@ -8,8 +8,6 @@
 
 A modern, responsive portfolio website showcasing my journey as a **Django Developer & Backend Engineer**. Built with cutting-edge web technologies to deliver a smooth, interactive user experience.
 
-![Portfolio Preview](./public/placeholder.svg)
-
 ## ✨ Features
 
 - **🎨 Modern Design**: Glassmorphism UI with dark theme and gradient accents
