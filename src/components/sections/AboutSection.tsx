@@ -26,7 +26,7 @@ const AboutSection = () => {
     { icon: MapPin, text: "Dhaka, Bangladesh" },
     { icon: Phone, text: "+880 1533 858640" },
     { icon: Mail, text: "reza15361382@gmail.com" },
-    { icon: H, text: "Hubar Tech LTD" },
+    { icon: Work, text: "Hubar Tech LTD" },
   ];
 
   return (
