@@ -1,56 +1,68 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, CreditCard, ShoppingCart, Store, IceCream } from "lucide-react";
+import { Github, ShoppingCart, Brain, Video, Map } from "lucide-react";
 
 const projects = [
   {
-    title: "Ecommerce System",
-    description: "A robust Django REST API project for an ecommerce platform with user authentication, product management, order processing, and payment integration.",
-    icon: ShoppingCart,
+    title: "GitBrain Repo Intelligence",
+    description: "A full‑stack platform utilizing a RAG pipeline to ingest GitHub repositories, index code, and deliver AI chat and summaries via a Django UI.",
+    icon: Brain,
     features: [
-      "JWT Authentication",
-      "Stripe & bKash Payments",
-      "Product CRUD",
-      "Order Management",
-      "Admin Dashboard",
-      "Swagger API Docs",
+      "RAG Pipeline Architecture",
+      "HTMX & SSE Streaming",
+      "Celery Async Indexing",
+      "Docker Compose Orchestration",
+      "GitHub Webhook Sync",
     ],
-    techStack: ["Django", "DRF", "PostgreSQL", "Stripe", "bKash", "JWT"],
-    github: "https://github.com/Hydra1536/ecommerce_system",
+    techStack: ["Django", "FastAPI", "pgvector", "Redis", "Ollama"],
+    github: "https://github.com/Hydra1536/GitBrain-AI-Repository-Agent",
     color: "from-primary via-primary/80 to-secondary",
   },
   {
-    title: "POS System",
-    description: "A POS system for managing products using Django, DRF, PostgreSQL with filtering, searching, pagination, rate limiting, and Swagger documentation.",
-    icon: Store,
+    title: "Video-Intel Analytics",
+    description: "A Python web app that analyzes videos to extract technical metrics, generate platform-aware thumbnails, and create AI-powered captions.",
+    icon: Video,
     features: [
-      "Full CRUD API",
-      "PostgreSQL Database",
-      "Filtering & Search",
-      "Rate Limiting (30 req/min)",
-      "Limit/Offset Pagination",
-      "Swagger Documentation",
+      "Computer Vision Analytics",
+      "Google Gemini Integration",
+      "Optical Flow & Sharpness Scoring",
+      "Async Video Processing",
+      "Platform-Aware Prompting",
     ],
-    techStack: ["Django", "DRF", "PostgreSQL", "Swagger", "Redis"],
-    github: "https://github.com/Hydra1536/POS-Project",
+    techStack: ["FastAPI", "Streamlit", "OpenCV", "Google Gemini"],
+    github: "https://github.com/Hydra1536/LLM-Fast-API-Project-Video-Intell",
     color: "from-secondary via-secondary/80 to-accent",
   },
   {
-    title: "Ice Cream Shop E-Commerce",
-    description: "A full-stack e-commerce application built with Django for an ice cream/sweet shop with complete ordering workflow and admin interface.",
-    icon: IceCream,
+    title: "TripELD Trip Planner",
+    description: "An Electronic Logging Device (ELD) trip planning app offering route optimization and FMCSA-compliant log generation for commercial drivers.",
+    icon: Map,
     features: [
-      "Product Catalog",
-      "Cart & Checkout",
-      "Order Tracking",
-      "Global Search",
-      "Admin CRUD Panel",
-      "User Feedback System",
+      "Interactive Leaflet Maps",
+      "HOS Computation Logic",
+      "Haversine Route Optimization",
+      "SVG Log Visualization",
+      "Lazy Loading UI",
     ],
-    techStack: ["Django", "PostgreSQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
-    github: "https://github.com/Hydra1536/Django-Ice-Cream-Shop",
+    techStack: ["Django DRF", "React", "Tailwind", "Vite"],
+    github: "https://github.com/Hydra1536/TripELD",
     color: "from-accent via-accent/80 to-primary",
+  },
+  {
+    title: "Ecommerce System",
+    description: "Production-ready ecommerce REST API with JWT authentication, role-based access control, order processing, and payment gateway integration.",
+    icon: ShoppingCart,
+    features: [
+      "Stripe & bKash Integration",
+      "JWT Authentication",
+      "Modular App Architecture",
+      "Swagger API Docs",
+      "Docker Containerized",
+    ],
+    techStack: ["Django", "DRF", "PostgreSQL", "Stripe", "Docker"],
+    github: "https://github.com/Hydra1536/ecommerce_system",
+    color: "from-primary via-accent/80 to-secondary",
   },
 ];
 
@@ -99,7 +111,7 @@ const ProjectsSection = () => {
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              Django-powered backend projects showcasing RESTful APIs, authentication systems, and full-stack applications.
+              Full-stack, AI, and backend projects showcasing RESTful APIs, modern web frameworks, and intelligent system integrations.
             </p>
           </motion.div>
 
