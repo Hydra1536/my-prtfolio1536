@@ -1,49 +1,56 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Briefcase, Users } from "lucide-react";
+import { Code, Github } from "lucide-react";
 
-const experiences = [
-    {
-    title: "SQA Engineer",
-    company: "Hubar Tech Limited",
-    period: "Jan 2026 – Present",
+const projects = [
+  {
+    title: "GitBrain Repo Intelligence RAG",
+    techStack: "Django • FastAPI • pgvector • Docker",
+    link: "https://github.com/Hydra1536/GitBrain-AI-Repository-Agent",
     description: [
-      "Conducted software quality assurance testing",
-      "Identified and documented bugs and issues",
-      "Performed API testing using Postman",
-      "Ensured quality standards were met before deployment",
+      "Built a full‑stack repo intelligence platform that ingests GitHub repositories and delivers chat, summaries, and file explanations.",
+      "Engineered a production‑style backend with Django/DRF, FastAPI AI services, HTMX streaming, SSE responses, and Celery.",
+      "Implemented a RAG stack utilizing pgvector embeddings, Redis caching, Ollama streaming, and automated GitHub webhook synchronization.",
+      "Packaged a multi-service container architecture using Docker Compose for Postgres+pgvector, Redis, RabbitMQ, and Nginx."
     ],
-    type: "work",
   },
   {
-    title: "Backend Developer (Intern)",
-    company: "Hubar Tech Limited",
-    period: "Nov 2025 – Jan 2026",
+    title: "Video-Intel Video Analytics",
+    techStack: "FastAPI • Python • Google Gemini • OpenCV",
+    link: "https://github.com/Hydra1536/LLM-Fast-API-Project-Video-Intell",
     description: [
-      "Developed REST APIs using Django REST Framework",
-      "Implemented JWT authentication and authorization",
-      "Worked with PostgreSQL database management",
-      "Collaborated with frontend team for API integration",
+      "Built a full-stack Python web app that analyzes short videos to return technical metrics, thumbnails, and AI-generated captions.",
+      "Engineered a production-style backend using FastAPI, Streamlit, REST APIs, async processing, and container-ready architecture.",
+      "Implemented computer vision tasks including FPS extraction, cut detection, optical flow motion analysis, and OCR with Tesseract.",
+      "Integrated Google Gemini multimodal for structured caption generation and designed platform-aware prompt engineering workflows."
     ],
-    type: "work",
   },
-
   {
-    title: "Former Director of Marketing",
-    company: "BRAC University Computer and Language Club (BUCLC)",
-    period: "2022 – 2025",
+    title: "TripELD Trip Planner",
+    techStack: "Django REST • React • Tailwind • Leaflet",
+    link: "https://github.com/Hydra1536/TripELD",
     description: [
-      "Led the marketing team for club activities",
-      "Managed content creation and documentation",
-      "Coordinated with other departments for events",
-      "Mentored junior members in technical writing",
+      "Developed a production-style trip planning ELD system revolutionizing route optimization and compliance for commercial drivers.",
+      "Implemented algorithms for Haversine distance calculations, route optimization, and FMCSA-compliant Hours of Service (HOS) computation.",
+      "Built interactive maps using Leaflet with animated route polylines, custom markers, and SVG-based ELD log visualizations.",
+      "Designed clean API architecture, service-layer business logic, and structured frontend–backend integration."
     ],
-    type: "leadership",
+  },
+  {
+    title: "Ecommerce System API",
+    techStack: "Django REST • PostgreSQL • Stripe • Docker",
+    link: "https://github.com/Hydra1536/ecommerce_system",
+    description: [
+      "Designed a modular ecommerce REST API with clean app separation for accounts, products, orders, and scalable architecture.",
+      "Implemented JWT-based authentication, role-based access control, and secure Stripe and bKash payment gateway integration.",
+      "Containerized the backend with Docker Compose and managed production-ready environment variables.",
+      "Integrated Swagger for API documentation, implemented unit testing, and developed robust database seeding workflows."
+    ],
   },
 ];
 
-const ExperienceSection = () => {
+const ProjectsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -70,7 +77,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="experience" className="py-24 relative">
+    <section id="projects" className="py-24 relative">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -82,7 +89,7 @@ const ExperienceSection = () => {
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-              Work <span className="gradient-text">Experience</span>
+              Featured <span className="gradient-text">Projects</span>
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </motion.div>
@@ -92,9 +99,9 @@ const ExperienceSection = () => {
             {/* Timeline Line */}
             <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-secondary to-accent transform md:-translate-x-1/2" />
 
-            {experiences.map((exp, index) => (
+            {projects.map((project, index) => (
               <motion.div
-                key={exp.title}
+                key={project.title}
                 variants={itemVariants}
                 className={`relative flex flex-col md:flex-row items-start mb-12 ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
@@ -114,27 +121,31 @@ const ExperienceSection = () => {
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className="glass-card rounded-2xl p-6 hover:glow-primary transition-all">
-                    {/* Icon & Period */}
-                    <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
-                      <div className={`p-2 rounded-lg ${exp.type === "work" ? "bg-primary/10" : "bg-secondary/10"}`}>
-                        {exp.type === "work" ? (
-                          <Briefcase className="w-4 h-4 text-primary" />
-                        ) : (
-                          <Users className="w-4 h-4 text-secondary" />
-                        )}
+                    {/* Icon & Link */}
+                    <div className={`flex items-center gap-4 mb-3 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
+                      <div className="p-2 rounded-lg bg-primary/10">
+                        <Code className="w-4 h-4 text-primary" />
                       </div>
-                      <span className="text-sm text-muted-foreground">{exp.period}</span>
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Github className="w-4 h-4" />
+                        <span>Repository</span>
+                      </a>
                     </div>
 
-                    {/* Title & Company */}
+                    {/* Title & Tech Stack */}
                     <h3 className="font-display text-xl font-semibold text-foreground mb-1">
-                      {exp.title}
+                      {project.title}
                     </h3>
-                    <p className="text-secondary font-medium mb-4">{exp.company}</p>
+                    <p className="text-secondary font-medium mb-4">{project.techStack}</p>
 
                     {/* Description */}
                     <ul className={`space-y-2 ${index % 2 === 0 ? "md:text-right" : ""}`}>
-                      {exp.description.map((item, i) => (
+                      {project.description.map((item, i) => (
                         <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
                           <span className={`w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 ${index % 2 === 0 ? "md:order-2" : ""}`} />
                           <span>{item}</span>
@@ -152,4 +163,4 @@ const ExperienceSection = () => {
   );
 };
 
-export default ExperienceSection;
+export default ProjectsSection;
