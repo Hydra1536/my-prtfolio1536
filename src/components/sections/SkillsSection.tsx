@@ -134,9 +134,6 @@ const SkillsSection = () => {
               My <span className="gradient-text">Skills</span>
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
-            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive toolkit for building AI-integrated solutions, robust backend systems, and modern multi-platform applications.
-            </p>
           </motion.div>
 
           {/* Skills Grid */}
