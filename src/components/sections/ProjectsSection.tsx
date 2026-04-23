@@ -5,6 +5,21 @@ import { Github, ShoppingCart, Brain, Video, Map } from "lucide-react";
 
 const projects = [
   {
+  title: "CWS Point of Sales Backend",
+  description: "A telecommunications-focused POS backend designed to streamline retail transactions, manage multi-branch inventory, and automate financial auditing [1, 2].",
+  icon: ShoppingCart,
+  features: [
+    "Hierarchical Till Architecture (Location → Branch → Till) [3, 4]",
+    "Persistent Cart Engine with 100-Item Capacity [5, 6]",
+    "Real-time Inventory Metrics & Staff Assignment [7, 8]",
+    "Financial Balance Reconciliation & Audit Logic [9, 10]",
+    "Dynamic Sales Workflows for Non-Serialized Products [11]",
+  ],
+  techStack: ["Python", "Django", "PostgreSQL", "REST APIs"],
+  github: "https://github.com/Hydra1536/CWS-POS-Backend",
+  color: "from-blue-600 via-blue-500 to-cyan-400",
+},
+  {
     title: "GitBrain Repo Intelligence",
     description: "A full‑stack platform utilizing a RAG pipeline to ingest GitHub repositories, index code, and deliver AI chat and summaries via a Django UI.",
     icon: Brain,
