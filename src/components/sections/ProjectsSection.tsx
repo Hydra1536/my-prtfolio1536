@@ -6,17 +6,17 @@ import { Github, ShoppingCart, Brain, Video, Map } from "lucide-react";
 const projects = [
   {
   title: "CWS Point of Sales Backend",
-  description: "A telecommunications-focused POS backend designed to streamline retail transactions, manage multi-branch inventory, and automate financial auditing [1, 2].",
+  description: "A telecommunications-focused POS backend designed to streamline retail transactions, manage multi-branch inventory, and automate financial auditing.",
   icon: ShoppingCart,
   features: [
-    "Hierarchical Till Architecture (Location → Branch → Till) [3, 4]",
-    "Persistent Cart Engine with 100-Item Capacity [5, 6]",
-    "Real-time Inventory Metrics & Staff Assignment [7, 8]",
-    "Financial Balance Reconciliation & Audit Logic [9, 10]",
-    "Dynamic Sales Workflows for Non-Serialized Products [11]",
+    "Hierarchical Till Architecture (Location → Branch → Till)",
+    "Persistent Cart Engine with 100-Item Capacity",
+    "Real-time Inventory Metrics & Staff Assignment",
+    "Financial Balance Reconciliation & Audit Logic",
+    "Dynamic Sales Workflows for Non-Serialized Products",
   ],
   techStack: ["Python", "Django", "PostgreSQL", "REST APIs"],
-  github: "https://github.com/Hydra1536/CWS-POS-Backend",
+  github: "https://github.com/Hydra1536",
   color: "from-blue-600 via-blue-500 to-cyan-400",
 },
   {
