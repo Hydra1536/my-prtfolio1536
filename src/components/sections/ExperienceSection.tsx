@@ -5,14 +5,15 @@ import { Briefcase, Users } from "lucide-react";
 
 const experiences = [
     {
-    title: "SQA Engineer",
+    title: "Python Backend Developer",
     company: "Hubar Tech Limited",
     period: "Jan 2026 – Present",
     description: [
-      "Conducted software quality assurance testing",
-      "Identified and documented bugs and issues",
-      "Performed API testing using Postman",
-      "Ensured quality standards were met before deployment",
+      "Architected hierarchical administrative modules",
+      "Engineered a high-capacity cart engine",
+      "Implemented real-time stock management logic",
+      "Developed automated financial reconciliation",
+      "Designed flexible sales journey endpoints",
     ],
     type: "work",
   },
